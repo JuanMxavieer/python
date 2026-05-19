@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+  Questã 2
+
+{% endblock %}
+
+{% block content %}
+
+<p>Aluno: {{ aluno.nome }}</p>
+<p>Idade: {{ aluno["idade"] }}</p>
+
+
+{% for aluno in alunos %}
+    <p>{{ aluno.nome }}</p>
+{% endfor %}
+
+
+{% for aluno in alunos %}
+    <p>{{ loop.index }} - {{ aluno.nome }} - {{ aluno.idade }}</p>
+{% endfor %}
+
+{% endblock %}

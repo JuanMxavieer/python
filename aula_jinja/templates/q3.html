@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+  Questã 3
+
+{% endblock %}
+
+{% block content %}
+
+<p>Aluno: {{ aluno.nome }}</p>
+<p>email: {{ aluno.email }}</p>
+
+{% for aluno in alunos %}
+    <p>{{ aluno.nome }}</p>
+{% endfor %}
+
+
+{% for aluno in alunos %}
+    <p>{{ loop.index }} - {{ aluno.nome }} - {{ aluno.idade }}</p>
+{% endfor %}
+
+{% endblock %}
